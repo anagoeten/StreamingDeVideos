@@ -22,7 +22,7 @@
         </nav>
 
         <div class="search-container" onclick="searchShow()">
-            <input type="text" placeholder="Search">
+            <input id="search" type="text" placeholder="Search">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
@@ -34,7 +34,7 @@
 
     <div class="search-mobile">
         <div class="search-mobile-container">
-            <input type="text" placeholder="Search">
+            <input id="search" type="text" placeholder="Search">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
     </div>
@@ -49,6 +49,43 @@
         </nav>
     </div>
 
+    <div class="home-container">
+        <video autoplay class="trailer" onclick="playPause()">
+            <source src="./assets/The Hunger Games_ The Ballad of Songbirds & Snakes (2023) Official Trailer.mp4" type="video/mp4">
+        </video>
+
+        <div class="home-title-container">
+            <h1>The Ballad of Songbirds & Snakes</h1>
+            <p>Years before he becomes the tyrannical president of Panem, 18-year-old Coriolanus Snow sees a chance to change his fortunes when he becomes a mentor to Lucy Gray Baird, the female tribute from District 12.</p>
+            <button><i class="fa-solid fa-play"></i> Watch Now</button>
+        </div>
+    </div>
+
+    <section>
+        <div class="content-container">
+
+            <div class="movies-container">
+                <h1>Best movies for you</h1>
+                <div class="movies-content"></div>
+            </div>
+
+            <div class="series-container">
+                <h1>Best series for you</h1>
+                <div class="series-content"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">
+            <i class="fa-solid fa-film"></i>
+            <h1>MOVIES</h1>
+        </div>
+        <div class="copyright">
+            <p>© MOVIES 2025.</p>
+        </div>
+    </footer>
 
     <script src="./script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />

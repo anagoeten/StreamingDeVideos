@@ -15,3 +15,64 @@ function searchShow() {
         searchMobile.classList.add('open-search');
     }
 }
+
+const video = document.querySelector('video')
+
+function playPause(){
+    if (video.paused){
+      video.play();
+    } else{
+      video.pause();
+    }
+}
+
+const moviesData = [
+    {image: './assets/movies/coco.jpeg', nome: 'Coco'},
+    {image: './assets/movies/coraline.jpg', nome:'Coraline'},
+    {image: './assets/movies/frozen-ii.jpeg', nome: 'Frozen 2'},
+    {image: './assets/movies/maze-runner.jpg', nome: 'Maze Runner'},
+    {image: './assets/movies/moana.jpg', nome: 'Moana 2'},
+    {image: './assets/movies/songbirds-and-snakes.jpg', nome: 'The Ballad of Songbirds and Snakes'},
+    {image: './assets/movies/terrifier.webp', nome: 'Terrifier'},
+    {image: './assets/movies/twilight.jpg', nome: 'Twilight'}
+];
+
+const seriesData = [
+    {image: './assets/series/all-of-us-are-dead.jpg', nome: 'All of Us Are Dead'},
+    {image: './assets/series/friends.jpg', nome: 'Friends'},
+    {image: './assets/series/haunting-of-hill-house.jpg', nome: 'The Haunting of Hill House'},
+    {image: './assets/series/la-casa-de-papel.webp', nome: 'La Casa de Papel'},
+    {image: './assets/series/lucifer.jpg',nome: 'Lucifer'},
+    {image: './assets/series/squid-game.webp', nome: 'Squid Game'},
+    {image: './assets/series/stranger-things.jpg', nome: 'Stranger Things'},
+    {image: './assets/series/the-vampire-diaries.webp', nome: 'The Vampire Diaries'}
+];
+
+const moviesContent = document.querySelector('.movies-content');
+const seriesContent = document.querySelector('.series-content');
+
+moviesData.forEach( movie => {
+    const movieCard = document.createElement('div')
+    movieCard.classList.add('movie-card')
+
+    movieCard.innerHTML = `
+        <img src="${movie.image}">
+        <a><i class="fa-solid fa-play"></i></a>
+        <p>${movie.nome}<p>
+    `
+
+    moviesContent.appendChild(movieCard)
+});
+
+seriesData.forEach( series => {
+    const seriesCard = document.createElement('div')
+    seriesCard.classList.add('series-card')
+
+    seriesCard.innerHTML = `
+        <img src="${series.image}">
+        <a><i class="fa-solid fa-play"></i></a>
+        <p>${series.nome}
+    `
+
+    seriesContent.appendChild(seriesCard)
+});

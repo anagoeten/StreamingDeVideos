@@ -10,8 +10,26 @@
 }
 
 body {
-    background-color: #2e2e2e;
+    background-color: #000;
+
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 15px;
+      }
+      
+    ::-webkit-scrollbar-track {
+        background: rgb(0, 0, 0);
+        border-radius: 10px;
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        background-color: #6161616b;
+        border-radius: 20px; 
+        border: 2px solid #000;
+      }
 }
+
+
 
 header {
     width: 100%;
@@ -232,4 +250,228 @@ li:hover {
         height: 40px;
     }
     
+}
+
+.home-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-container video {
+    width: 100%;
+    height: auto;
+}
+
+.home-container video source {
+    height: 300px;
+}
+
+.home-title-container {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    position: absolute;
+}
+
+.home-title-container h1 {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.home-title-container p {
+    color: #fff;
+}
+
+.home-title-container button {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #9c0000;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.home-title-container button:hover {
+    background-color: #fff;
+    color: #9c0000;
+}
+
+@media (max-width: 1150px) {
+    .home-title-container h1 {
+        font-size: 3rem;
+    }
+
+    .home-title-container p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1080px) {    
+    .home-title-container {
+        gap: 10px;
+    }
+
+    .home-title-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-title-container p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 980px) {
+    .home-title-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-title-container p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .home-title-container h1 {
+        font-size: 2rem;
+    }
+
+    .home-title-container p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .home-title-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-title-container p {
+        font-size: 0.6rem;
+    }
+
+    .home-title-container button {
+        width: 120px;
+        height: 30px;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 685px) {
+    .home-title-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-title-container p {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .home-title-container h1 {
+        font-size: 1.3rem;
+    }
+
+    .home-title-container p {
+        display: none;
+    }
+
+    .home-title-container button {
+        width: 100px;
+        height: 20px;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .home-title-container h1 {
+        font-size: 1rem;
+    }
+}
+
+.movies-container, .series-container {
+    height: 50vh;
+    padding: 50px 10px;
+}
+
+.movies-container h1, .series-container h1 {
+    color: #fff;
+}
+
+.movies-content, .series-content {
+    overflow-x: auto;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card, .series-card {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.movie-card img, .series-card img {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .3s;
+}
+.movie-card:hover img, .series-card:hover img {
+    transform: scale(1.1);
+}
+
+.movie-card a, .series-card a {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    cursor: pointer;
+    color: transparent;
+    font-size: 3rem;
+    transition: .3s;
+}
+
+.movie-card:hover a, .series-card:hover a {
+    background-color: #6161616b;
+    color: #9c0000;
+    transform: scale(1.1);
+}
+
+.movie-card p, .series-card p {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #6161616b;
+    margin-top: 50px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright {
+    font-size: 0.8rem;
 }
