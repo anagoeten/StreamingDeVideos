@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Streaming</title>
+</head>
+<body>
+    <header>
+            <div class="logo">
+                <i class="fa-solid fa-film"></i>
+                <h1>MOVIES</h1>
+            </div>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Movies</li>
+                <li>Series</li>
+            </ul>
+        </nav>
+
+        <div class="search-container" onclick="searchShow()">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <button class="menu-icon-container" onclick="menuShow()">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </button>
+
+    </header>
+
+    <div class="search-mobile">
+        <div class="search-mobile-container">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+
+    <div class="menu-mobile">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Movies</li>
+                <li>Series</li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>

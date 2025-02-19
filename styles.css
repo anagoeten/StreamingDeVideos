@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: #2e2e2e;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+}
+
+.logo {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo i {
+    color: #9c0000;
+    font-size: 3rem;
+}
+
+.logo h1 {
+    color: #9c0000;
+    font-size: 1.5rem;
+}
+
+header nav {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    color: #fff;
+    cursor: pointer;
+}
+
+li:hover {
+    font-weight: bold;
+}
+
+.search-container {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6161616b;
+    border-radius: 50px;
+}
+
+.search-container input {
+    width: 200px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 25px;
+}
+
+.search-container i {
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-icon-container {
+    display: none;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+.search-mobile {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    header nav {
+        display: none;
+    }
+
+    .menu-icon-container {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #9c0000;
+        cursor: pointer;
+        border: none;
+    }
+
+    .menu-icon-container i {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .menu-mobile {
+        width: 100%;
+        height: 300px;
+        background-color: #9c0000a6;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .open {
+        display: flex;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 20px;
+    }
+    .search-container {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-container input {
+        display: none;
+    }
+
+    .open-search {
+        display: flex;
+    }
+
+    .search-mobile {
+        width: 100%;
+        height: 100px;
+        top: 0;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        padding: 0 10px;
+    }
+
+    .search-mobile-container {
+        max-width: 250px;
+        height: 90%;
+        height: 50px;
+        background-color: #6161616b;
+        border-radius: 50px;
+    }
+
+    .search-mobile-container input {
+        width: 80%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 10px;
+    }
+    .search-mobile-container i {
+        font-size: 1rem;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 350px) {
+    .logo {
+        gap: 0;
+    }
+    .logo i {
+        font-size: 2.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .search-container {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-icon-container {
+        width: 40px;
+        height: 40px;
+    }
+    
+}
