@@ -22,7 +22,7 @@
         </nav>
 
         <div class="search-container" onclick="searchShow()">
-            <input id="search" type="text" placeholder="Search">
+            <input class="search" type="text" placeholder="Search">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
@@ -34,7 +34,7 @@
 
     <div class="search-mobile">
         <div class="search-mobile-container">
-            <input id="search" type="text" placeholder="Search">
+            <input class="search-input-mobile" type="text" placeholder="Search">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
     </div>
@@ -50,7 +50,7 @@
     </div>
 
     <div class="home-container">
-        <video autoplay class="trailer" onclick="playPause()">
+        <video class="trailer" onclick="playPause()">
             <source src="./assets/The Hunger Games_ The Ballad of Songbirds & Snakes (2023) Official Trailer.mp4" type="video/mp4">
         </video>
 
@@ -63,14 +63,17 @@
 
     <section>
         <div class="content-container">
+            <div class="no-results">
+                <h3>No results found.</h3>
+            </div>
 
             <div class="movies-container">
-                <h1>Best movies for you</h1>
+                <h1>Movies</h1>
                 <div class="movies-content"></div>
             </div>
 
             <div class="series-container">
-                <h1>Best series for you</h1>
+                <h1>Series</h1>
                 <div class="series-content"></div>
             </div>
 

@@ -1,3 +1,4 @@
+// Menu mobile
 function menuShow() {
     let menuMobile = document.querySelector('.menu-mobile');
     if (menuMobile.classList.contains('open')) {
@@ -6,6 +7,50 @@ function menuShow() {
         menuMobile.classList.add('open');   
     }
 }
+
+
+// Search
+const searchInput = document.querySelector('.search');
+const searchInputMobile = document.querySelector('.search-mobile');
+
+const homeContainer = document.querySelector('.home-container');
+
+const noResults = document.querySelector('.no-results');
+
+
+searchInput.addEventListener('input', (event) => {
+    const value = formatString(event.target.value);
+
+    const items = document.querySelectorAll('.movie-card, .series-card');
+
+    let hasResults = false;
+
+    if (value != false) {
+        homeContainer.style.display = 'none';
+    } else {
+        homeContainer.style.display = 'flex';
+    }
+
+    if (value != '') {
+        items.forEach(item => {
+
+            if(formatString(item.textContent).indexOf(value) !== -1) {
+                item.style.display = 'flex';
+
+                hasResults = true;
+            } else {
+                item.style.display = 'none';
+            }
+            
+        })
+
+        if(hasResults) {
+            noResults.style.display = 'none';
+        } else {
+            noResults.style.display = 'block'
+        }
+    }
+});
 
 function searchShow() {
     let searchMobile = document.querySelector('.search-mobile');
@@ -16,6 +61,45 @@ function searchShow() {
     }
 }
 
+searchInputMobile.addEventListener('input', (event) => {
+    const value = formatString(event.target.value);
+
+    const items = document.querySelectorAll('.movie-card, .series-card');
+
+    let hasResults = false;
+
+    if (value != false) {
+        homeContainer.style.display = 'none';
+    } else {
+        homeContainer.style.display = 'flex';
+    }
+
+    if (value != '') {
+        items.forEach(item => {
+
+            if(formatString(item.textContent).indexOf(value) !== -1) {
+                item.style.display = 'flex';
+
+                hasResults = true;
+            } else {
+                item.style.display = 'none';
+            }
+            
+        })
+
+        if(hasResults) {
+            noResults.style.display = 'none';
+        } else {
+            noResults.style.display = 'block'
+        }
+    }
+});
+
+function formatString(values) {
+    return values.toLowerCase().trim()
+}
+
+// Video pause
 const video = document.querySelector('video')
 
 function playPause(){
@@ -26,6 +110,7 @@ function playPause(){
     }
 }
 
+// Content
 const moviesData = [
     {image: './assets/movies/coco.jpeg', nome: 'Coco'},
     {image: './assets/movies/coraline.jpg', nome:'Coraline'},
@@ -58,7 +143,7 @@ moviesData.forEach( movie => {
     movieCard.innerHTML = `
         <img src="${movie.image}">
         <a><i class="fa-solid fa-play"></i></a>
-        <p>${movie.nome}<p>
+        <p class="name">${movie.nome}</p>
     `
 
     moviesContent.appendChild(movieCard)
@@ -71,7 +156,7 @@ seriesData.forEach( series => {
     seriesCard.innerHTML = `
         <img src="${series.image}">
         <a><i class="fa-solid fa-play"></i></a>
-        <p>${series.nome}
+        <p class="name">${series.nome}</p>
     `
 
     seriesContent.appendChild(seriesCard)
